@@ -231,10 +231,10 @@
       "id": "c28",
       "col": "done",
       "title": "28 · update-artifacts-board skill 落地清理",
-      "detail": "skill 已以 acb5af8 直接推入 dot-pi main（无 PR）。远程还留 feat/update-artifacts-board-skill（同 tip）。触发率 eval 约 precision 0.98 / recall 1.00。",
-      "next": "你定：保留 acb5af8 或 revert；是否删远程 feat 分支",
-      "human": "回编号：留/revert；删/留 feat 分支",
-      "stamp": "2026-10-13 14:30 CST"
+      "detail": "已按最合理路径处理：保留 acb5af8（已在 main）；远程 feat/update-artifacts-board-skill 已删（相对 main ahead=0 behind=8）。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-14 07:36 CST"
     },
     {
       "id": "c30",
