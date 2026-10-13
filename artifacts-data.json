@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 12:19 CST",
+  "updated": "2026-10-13 13:50 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -14,20 +14,20 @@
     {
       "id": "c2",
       "col": "progress",
-      "title": "2 · Antigravity Gemini 地区限制",
-      "detail": "美国机（Ashburn）Gemini+Claude 均通过；Mac mini Gemini 仍被拦（Clash 出口 LA 203.10.96.139）→ 更像机房 IP/付款国家问题。",
-      "next": "试住宅 IP / 换节点；可选核对付款国家",
-      "human": "可选：核对付款国家",
-      "stamp": "2026-10-13 11:40 CST"
+      "title": "2 · Antigravity @ Mac mini",
+      "detail": "正在诊断与美国环境的网络差异（出口 IP / DNS / 代理 / VPN）。只诊断、不改配置。",
+      "next": "对比 Mac mini vs 美国机出口路径；确认差异点后汇报",
+      "human": "无",
+      "stamp": "2026-10-13 13:50 CST"
     },
     {
       "id": "c3",
-      "col": "done",
-      "title": "3 · K3 Pi 扩展（grunt → kimi-k3）",
-      "detail": "独立仓 liush2yuxjtu/dot-pi-kimi-k3-extension；PR #2 已 squash 合入 main：删光 Actions，质量门迁到 verify skill（模板=dot-pi agent/skills/verify/SKILL.md）。本地 npm test 11/11 + verify-guards ok；live Pi/钥匙串面 BLOCKED。模型 moonshot/kimi-k3 @ api.moonshot.cn。",
-      "next": "可选：在 Mac mini 跑 live verify（Pi + 钥匙串 + K3 实调）",
+      "col": "progress",
+      "title": "3 · K3 扩展（dot-pi-kimi-k3-extension）",
+      "detail": "实际：PR #2 已合入 main（squash 9da3638），删光 Actions、质量门迁 verify skill；本地 npm test 11/11 + verify-guards ok。用户称「仍在拉取」— 与已合入状态不一致，待确认本地/远端同步。live Pi/钥匙串面仍 BLOCKED。",
+      "next": "确认拉取侧是否已拿到 9da3638；可选 Mac mini live verify（Pi + 钥匙串 + K3）",
       "human": "无",
-      "stamp": "2026-10-13 11:51 CST"
+      "stamp": "2026-10-13 13:50 CST"
     },
     {
       "id": "c4",
@@ -50,11 +50,11 @@
     {
       "id": "c6",
       "col": "human",
-      "title": "6 · 飞书组织改名 AFK Agents",
-      "detail": "改名仍被拦（未认证且次数用尽）。调研：无「个人认证」；法人/公章认证需营业执照；团队认证材料官方正文未读到。认证后改名须与主体材料一致，故认证未必能改成 AFK Agents。认证免费。邀请链仍可用。",
-      "next": "你选：①新建租户直接叫 AFK Agents（推荐）；②后台试团队认证看材料；③办个体工商户再认证；④转发邀请链给黄运樟",
-      "human": "选路径 / 或转发邀请",
-      "stamp": "2026-10-13 11:52 CST"
+      "title": "6 · 飞书新建租户（需你批准）",
+      "detail": "原租户改名仍被拦。推荐新建租户直接叫 AFK Agents（需你批准后再建）。邀请链仍可用。",
+      "next": "你批准后新建租户；或选认证/转发邀请等备选",
+      "human": "批准新建租户（或另选路径）",
+      "stamp": "2026-10-13 13:50 CST"
     },
     {
       "id": "c7",
@@ -176,11 +176,56 @@
     {
       "id": "c21",
       "col": "progress",
-      "title": "21 · ADR 中后期打不到：通关审计",
-      "detail": "根因：live engine 只有早期切片（生火/伐木/陷阱/小屋），中后期内容根本不存在（缺失机制，非节奏慢）。PR #32 已合入 live（cc27e8b）：补全村落经济→世界/战斗→矿→地牢→飞船/装配机→太空结局→转生；自动通关脚本 seed7 打通，verify 全 PASS。重制比原作常数下限慢约 8 倍（工人囤货、水壶/水桶距离门闩、矿工吃口粮）。",
-      "next": "复核线上部署；补处决者地牢逐房复刻（100% 对等）；调节奏摩擦",
+      "title": "21 · A Dark Room 自动通关 / verify 循环",
+      "detail": "云端仍在跑（cloud agent bc-d25b20ff）。此前 PR #32 已合 live（cc27e8b）补全中后期；自动通关 seed7 曾 PASS。",
+      "next": "等云端 agent 出结果；复核线上部署",
       "human": "无",
-      "stamp": "2026-10-13 12:19 CST"
+      "stamp": "2026-10-13 13:50 CST"
+    },
+    {
+      "id": "c22",
+      "col": "progress",
+      "title": "22 · BOSS 直聘登录（Mac mini boss-tracker）",
+      "detail": "二维码 13:44 已过期；网页端未收到扫码确认。",
+      "next": "生成单张新码（不自动刷新）；你扫码并在手机确认；登录后只读核对 117 条漏斗",
+      "human": "扫码并在手机确认",
+      "stamp": "2026-10-13 13:50 CST"
+    },
+    {
+      "id": "c23",
+      "col": "progress",
+      "title": "23 · 闲鱼登录 + 开店",
+      "detail": "页面仍显示「登录」，访客 cookie；开店未开始。任何付款前停。",
+      "next": "生成单张新码；你扫码登录后仅准备开店流程，付款前一律停",
+      "human": "扫码登录",
+      "stamp": "2026-10-13 13:50 CST"
+    },
+    {
+      "id": "c24",
+      "col": "progress",
+      "title": "24 · dot-pi PR #171",
+      "detail": "用户称「已合待 Mac mini 实机验证」。实际：PR #171（Switch agent-fleet grunt default to Moonshot Kimi K3）已关闭未合入（mergedAt=null，closedAt≈11:31 HKT）。待确认下一步。",
+      "next": "确认是否重开/另开 PR，或仅做 Mac mini 实机验证其它合入",
+      "human": "确认 PR 处置",
+      "stamp": "2026-10-13 13:50 CST"
+    },
+    {
+      "id": "c25",
+      "col": "human",
+      "title": "25 · Pi albert 码（仍有效，尽快用）",
+      "detail": "设备码仍有效；请尽快在 Pi 侧使用。看板不写码值。",
+      "next": "你在 Pi 输入设备码完成登录",
+      "human": "尽快使用设备码",
+      "stamp": "2026-10-13 13:50 CST"
+    },
+    {
+      "id": "c26",
+      "col": "human",
+      "title": "26 · Windows C 盘清理（约 14G 缓存）",
+      "detail": "约 14G 缓存可清；删除需你批准。不擅自删。",
+      "next": "你批准后按清单清理",
+      "human": "批准删除约 14G 缓存",
+      "stamp": "2026-10-13 13:50 CST"
     }
   ]
 }
