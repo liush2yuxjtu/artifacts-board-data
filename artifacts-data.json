@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 13:50 CST",
+  "updated": "2026-10-13 14:26 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -49,12 +49,12 @@
     },
     {
       "id": "c6",
-      "col": "human",
-      "title": "6 · 飞书新建租户（需你批准）",
-      "detail": "原租户改名仍被拦。推荐新建租户直接叫 AFK Agents（需你批准后再建）。邀请链仍可用。",
-      "next": "你批准后新建租户；或选认证/转发邀请等备选",
-      "human": "批准新建租户（或另选路径）",
-      "stamp": "2026-10-13 13:50 CST"
+      "col": "done",
+      "title": "6 · 飞书新企业 fkagents",
+      "detail": "已新建租户 fkagents：ycn48r62f2f8.feishu.cn，企业编号 F2P7R56KVR6，管理后台 /admin/index。由「用户863120的组织」改名（认证前改名额度已用）。旧租户「流水 agent 工作间」wcnh1zz72660 / F6X4ZN88KL8 未改动。未认证。",
+      "next": "邀请成员 / 企业认证（可选）",
+      "human": "无",
+      "stamp": "2026-10-13 14:26 CST"
     },
     {
       "id": "c7",
