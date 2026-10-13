@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 11:45 CST",
+  "updated": "2026-10-13 11:51 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -24,10 +24,10 @@
       "id": "c3",
       "col": "done",
       "title": "3 · K3 Pi 扩展（grunt → kimi-k3）",
-      "detail": "独立仓 liush2yuxjtu/dot-pi-kimi-k3-extension；PR #1 已 squash 合入 main（a9e4e51）。CI 11/11 + Actions 绿。dot-pi #171 已关、未入 main。模型 moonshot/kimi-k3 @ api.moonshot.cn。 · 架构：内容只改 JSON",
-      "next": "等 verify-skill PR；看板内容已改远程 JSON",
+      "detail": "独立仓 liush2yuxjtu/dot-pi-kimi-k3-extension；PR #2 已 squash 合入 main：删光 Actions，质量门迁到 verify skill（模板=dot-pi agent/skills/verify/SKILL.md）。本地 npm test 11/11 + verify-guards ok；live Pi/钥匙串面 BLOCKED。模型 moonshot/kimi-k3 @ api.moonshot.cn。",
+      "next": "可选：在 Mac mini 跑 live verify（Pi + 钥匙串 + K3 实调）",
       "human": "无",
-      "stamp": "2026-10-13 11:41 CST"
+      "stamp": "2026-10-13 11:51 CST"
     },
     {
       "id": "c4",
