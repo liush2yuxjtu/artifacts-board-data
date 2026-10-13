@@ -292,10 +292,10 @@
     },
     {
       "id": "c34",
-      "col": "progress",
+      "col": "done",
       "title": "34 · GrokBot → Artifacts 看板同步",
-      "detail": "Artifacts 是工件看板（非网盘）。本轮把今日关键状态写入 artifacts-data.json 并 sync 到 artifacts-board-data。不上传系统盘/密钥明文到看板。",
-      "next": "sync-artifacts-data.sh 推远程",
+      "detail": "已写入并推送 artifacts-board-data@b26db04。看板 https://artifacts-board.vercel.app 。Artifacts 无通用文件存储接口，故只同步状态卡片与链接，不同步整仓文件。",
+      "next": "",
       "human": "",
       "stamp": "2026-10-13 17:50 CST"
     }
