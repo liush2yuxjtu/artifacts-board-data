@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 14:30 CST",
+  "updated": "2026-10-13 14:38 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -247,12 +247,12 @@
     },
     {
       "id": "c29",
-      "col": "blocked",
+      "col": "done",
       "title": "29 · Mac mini Cursor 本地执行",
-      "detail": "ListMachines：liushiyudeMac-mini.local 未连接。阻塞 BOSS/闲鱼 Playwright、Clash Gemini 节点续跑、K3 本机安装。Tailscale 节点或仍可达，但 Cursor local-exec 离线。",
-      "next": "你在 Mac mini 打开 Cursor 并连上本地执行",
-      "human": "重连 Mac mini Cursor",
-      "stamp": "2026-10-13 14:30 CST"
+      "detail": "根因：Clash 坏节点「美国01|合适下载使用-0.01倍」导致 api2.cursor.sh TLS 失败；非休眠/非进程挂。已切「美国圣何塞01-0.1倍」并重启 Cursor。ListMachines：192.168.1.203(=Mac mini) connected，本机 hostname 命令实测通过。",
+      "next": "可继续 BOSS/闲鱼 Playwright 与 Clash Gemini",
+      "human": "",
+      "stamp": "2026-10-13 14:38 CST"
     }
   ]
 }
