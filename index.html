@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Artifacts · 工件看板</title>
+<style>
+:root{--bg:#0f1115;--panel:#171a21;--card:#1e2330;--text:#e8eaed;--muted:#9aa0a6;--border:#2a3140;--done:#34a853;--progress:#4285f4;--human:#fbbc04;--blocked:#ea4335}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"PingFang SC","Noto Sans SC",sans-serif;background:var(--bg);color:var(--text)}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#12151b;border-bottom:1px solid var(--border);gap:12px;flex-wrap:wrap}
+nav h1{margin:0;font-size:18px}nav h1 small{color:var(--muted);font-weight:400;margin-left:6px}
+.nav-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#clock,#dataStamp{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+#status{font-size:12px;color:var(--muted)}#status.err{color:var(--blocked)}#status.ok{color:var(--done)}
+main{padding:16px 20px}.strip,.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.pill{background:var(--panel);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:12px}
+.bar{flex:1;min-width:160px;height:8px;background:var(--panel);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--done)}
+select,input,button{background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font:inherit;font-size:13px}button{cursor:pointer}
+button.primary{border-color:var(--progress);color:#aecbfa}
+.board{display:grid;grid-template-columns:repeat(4,minmax(240px,1fr));gap:14px;overflow-x:auto;padding-bottom:8px}
+@media(max-width:900px){.board{grid-template-columns:repeat(4,80vw);scroll-snap-type:x mandatory}.col{scroll-snap-align:start}}
+.col{background:var(--panel);border:1px solid var(--border);border-left:4px solid;border-radius:12px;padding:12px;min-height:160px}
+.col.drag{outline:2px dashed var(--muted)}.col h2{margin:0 0 10px;font-size:14px;display:flex;justify-content:space-between}
+.done{border-left-color:var(--done)}.progress{border-left-color:var(--progress)}.human{border-left-color:var(--human)}.blocked{border-left-color:var(--blocked)}
+.done h2{color:var(--done)}.progress h2{color:var(--progress)}.human h2{color:var(--human)}.blocked h2{color:var(--blocked)}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid;border-radius:10px;padding:10px 12px;margin-bottom:10px;cursor:grab}
+.card h3{margin:0;font-size:14px;line-height:1.35}.card .sum{font-size:12px;color:var(--muted);margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card .full{display:none;font-size:12px;line-height:1.5;margin-top:8px}.card.open .full{display:block}.card.open .sum{display:none}
+.full b{color:#c4c7cc}.full p{margin:0 0 6px}.stamp{font-size:11px;color:#7a8088}.empty{font-size:12px;color:var(--muted)}
+</style></head><body>
+<nav>
+  <h1>Artifacts<small>工件</small></h1>
+  <div class="nav-right">
+    <span id="dataStamp"></span>
+    <span id="status">加载中…</span>
+    <button type="button" class="primary" id="refresh">刷新</button>
+    <span id="clock"></span>
+  </div>
+</nav>
+<main><div class="strip" id="strip"></div>
+<div class="filters"><select id="fcol"><option value="">全部列</option></select><input id="fkw" placeholder="关键词筛选…"/><button id="reset">重置</button></div>
+<div class="board" id="board"></div></main>
+<script>
+// 数据源：同仓相对路径优先（GitHub Pages）；失败再 raw / jsDelivr。内容更新只改 JSON。
+const DATA_URLS = [
+  "./artifacts-data.json",
+  "https://raw.githubusercontent.com/liush2yuxjtu/artifacts-board-data/main/artifacts-data.json",
+  "https://cdn.jsdelivr.net/gh/liush2yuxjtu/artifacts-board-data@main/artifacts-data.json"
+];
+const COLS=[["done","已完成"],["progress","进行中"],["human","待你操作"],["blocked","阻塞"]];
+const KEY="artifacts-board-pos-v1";
+let CARDS=[];
+let pos={};try{pos=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+const colOf=c=>pos[c.id]||c.col;
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const fcol=document.getElementById("fcol"),fkw=document.getElementById("fkw");
+const statusEl=document.getElementById("status");
+COLS.forEach(([k,n])=>fcol.add(new Option(n,k)));
+function render(){
+ const kw=fkw.value.trim().toLowerCase(),fc=fcol.value,b=document.getElementById("board");b.innerHTML="";
+ if(!CARDS.length){b.innerHTML='<div class="empty">暂无数据</div>';document.getElementById("strip").innerHTML="";return;}
+ const counts={};COLS.forEach(([k])=>counts[k]=0);CARDS.forEach(c=>counts[colOf(c)]++);
+ COLS.forEach(([k,n])=>{ if(fc&&fc!==k)return;
+  const s=document.createElement("section");s.className="col "+k;s.dataset.col=k;
+  s.innerHTML=`<h2>${n}<span class="pill">${counts[k]}</span></h2>`;
+  const list=CARDS.filter(c=>colOf(c)===k&&(!kw||JSON.stringify(c).toLowerCase().includes(kw)));
+  list.forEach(c=>{const a=document.createElement("article");a.className="card "+k;a.draggable=true;a.dataset.id=c.id;
+   a.innerHTML=`<h3>${esc(c.title)}</h3><div class="sum">${esc(c.detail)}</div><div class="full"><p><b>详情</b> ${esc(c.detail)}</p><p><b>下一步</b> ${esc(c.next)}</p><p><b>人要做</b> ${esc(c.human)}</p>${c.stamp?`<p class="stamp">${esc(c.stamp)}</p>`:""}</div>`;
+   a.onclick=()=>a.classList.toggle("open");a.ondragstart=e=>e.dataTransfer.setData("text/plain",c.id);s.appendChild(a)});
+  if(!list.length)s.insertAdjacentHTML("beforeend",'<div class="empty">暂无卡片</div>');
+  s.ondragover=e=>{e.preventDefault();s.classList.add("drag")};s.ondragleave=()=>s.classList.remove("drag");
+  s.ondrop=e=>{e.preventDefault();const id=e.dataTransfer.getData("text/plain");pos[id]=k;localStorage.setItem(KEY,JSON.stringify(pos));render()};
+  b.appendChild(s)});
+ const pct=Math.round(counts.done/CARDS.length*100);
+ document.getElementById("strip").innerHTML=COLS.map(([k,n])=>`<span class="pill">${n} ${counts[k]}</span>`).join("")+`<span class="pill">进度 ${pct}% (${counts.done}/${CARDS.length})</span><div class="bar"><i style="width:${pct}%"></i></div>`;
+}
+async function loadData(){
+ statusEl.className="";statusEl.textContent="加载中…";
+ const bust="?t="+Date.now();
+ let lastErr=null;
+ for(const base of DATA_URLS){
+  try{
+   const r=await fetch(base+bust,{cache:"no-store"});
+   if(!r.ok) throw new Error(r.status+" "+r.statusText);
+   const data=await r.json();
+   CARDS=Array.isArray(data.cards)?data.cards:(Array.isArray(data)?data:[]);
+   document.getElementById("dataStamp").textContent=data.updated?("数据 "+data.updated):"";
+   statusEl.className="ok";statusEl.textContent="已刷新 "+CARDS.length+" 卡";
+   render();return;
+  }catch(e){lastErr=e}
+ }
+ statusEl.className="err";statusEl.textContent="加载失败："+(lastErr&&lastErr.message||lastErr);
+}
+fcol.onchange=fkw.oninput=render;
+document.getElementById("reset").onclick=()=>{pos={};localStorage.removeItem(KEY);fcol.value="";fkw.value="";render()};
+document.getElementById("refresh").onclick=()=>loadData();
+const tick=()=>document.getElementById("clock").textContent=new Date().toLocaleString("zh-CN",{timeZone:"Asia/Shanghai",hour12:false})+" CST";
+tick();setInterval(tick,1000);loadData();
+</script></body></html>
