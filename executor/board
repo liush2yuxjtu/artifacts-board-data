@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# board list | show <id> | set <id> <field> <value> | sync | verify | airtable-payload
+set -euo pipefail
+DATA=/home/box/agent-data/docs/artifacts-data.json
+SYNC=/home/box/agent-data/docs/sync-artifacts-data.sh
+URL=https://liush2yuxjtu.github.io/artifacts-board-data/
+RAW=https://raw.githubusercontent.com/liush2yuxjtu/artifacts-board-data/main/artifacts-data.json
+cmd=${1:-list}; shift || true
+case "$cmd" in
+ list) python3 - "$DATA" "${1:-}" <<'P'
+import json,sys;d=json.load(open(sys.argv[1]));f=sys.argv[2]
+print("updated:",d["updated"],"cards:",len(d["cards"]))
+for c in d["cards"]:
+  if not f or c["col"]==f: print(f'{c["id"]:5} {c["col"]:9} {c["title"]}')
+P
+ ;;
+ show) python3 -c "import json,sys;d=json.load(open('$DATA'));print(json.dumps([c for c in d['cards'] if c['id']=='$1'],ensure_ascii=False,indent=1))";;
+ set) python3 - "$DATA" "$1" "$2" "$3" <<'P'
+import json,sys,datetime,zoneinfo
+p,i,k,v=sys.argv[1:];d=json.load(open(p))
+now=datetime.datetime.now(zoneinfo.ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M CST")
+cs=[c for c in d["cards"] if c["id"]==i]
+if not cs: cs=[{"id":i,"col":"progress","title":i,"detail":"","next":"","human":"","stamp":""}]; d["cards"].append(cs[0])
+assert k in ("col","title","detail","next","human","stamp"), "bad field"
+if k=="col": assert v in ("done","progress","human","blocked")
+cs[0][k]=v; d["updated"]=now
+json.dump(d,open(p,"w"),ensure_ascii=False,indent=2); print("ok",i,k)
+P
+ ;;
+ sync) "$SYNC";;
+ verify) curl -fsS -o /dev/null -w "pages %{http_code}\n" "$URL"; curl -fsS "$RAW?t=$(date +%s)" | python3 -c "import json,sys;d=json.load(sys.stdin);print('remote updated',d['updated'],'cards',len(d['cards']))";;
+ airtable-payload) python3 "$(dirname "$0")/airtable_payload.py";;
+ *) echo "usage: board list [col]|show <id>|set <id> <field> <value>|sync|verify|airtable-payload"; exit 1;;
+esac
