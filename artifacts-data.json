@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 14:26 CST",
+  "updated": "2026-10-13 14:30 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -14,29 +14,29 @@
     {
       "id": "c2",
       "col": "progress",
-      "title": "2 · Antigravity @ Mac mini",
-      "detail": "正在诊断与美国环境的网络差异（出口 IP / DNS / 代理 / VPN）。只诊断、不改配置。",
-      "next": "对比 Mac mini vs 美国机出口路径；确认差异点后汇报",
-      "human": "无",
-      "stamp": "2026-10-13 13:50 CST"
+      "title": "2 · Antigravity / Gemini @ Mac mini",
+      "detail": "未修好。Clash「赔钱机场」节点轮测中途中断（可能切到圣何塞01并清过连接）；Cursor 本地执行离线。默认 Gemini 仍 FAILED_PRECONDITION（地区）。claude-sonnet-4-6 曾可用。",
+      "next": "Mac mini Cursor 重连后续跑节点测试（勿清连接）；必要时再查住宅 IP / 付款国",
+      "human": "无（或确认 Mac mini 在线）",
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c3",
       "col": "progress",
-      "title": "3 · K3 扩展（dot-pi-kimi-k3-extension）",
-      "detail": "实际：PR #2 已合入 main（squash 9da3638），删光 Actions、质量门迁 verify skill；本地 npm test 11/11 + verify-guards ok。用户称「仍在拉取」— 与已合入状态不一致，待确认本地/远端同步。live Pi/钥匙串面仍 BLOCKED。",
-      "next": "确认拉取侧是否已拿到 9da3638；可选 Mac mini live verify（Pi + 钥匙串 + K3）",
+      "title": "3 · K3 扩展（仓有、机未装）",
+      "detail": "仓 liush2yuxjtu/dot-pi-kimi-k3-extension：PR #2 已合 main（9da3638）。Mac mini 未安装扩展；fleet 仍 kimi-k2.7-code @ api.moonshot.cn。dot-pi #171 已关未合。",
+      "next": "Mac mini 装扩展并做 live verify；或明确暂不装",
       "human": "无",
-      "stamp": "2026-10-13 13:50 CST"
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c4",
       "col": "done",
       "title": "4 · Pi albert Pro 设备码重登",
-      "detail": "设备码登录成功；openai-codex / gpt-6.1-sol = ready；plan=pro；钥匙串已更新。（码值已从看板移除）",
+      "detail": "albert 设备码登录仍有效至约 2026-10-23 10:55 CST（约 9–10 天）；openai-codex / gpt-6.1-sol ready；未重发码。看板不写码值。",
       "next": "无",
       "human": "无",
-      "stamp": "2026-10-13 13:50 CST"
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c5",
@@ -59,11 +59,11 @@
     {
       "id": "c7",
       "col": "done",
-      "title": "7 · Windows 磁盘：WoW 卸载 + 缓存清理",
-      "detail": "WoW 已卸约 +120–127GB；npm/TEMP/pip 缓存约 +11GB；C: 空闲约 168GB。Windows 磁盘问题已解决。",
+      "title": "7 · Windows C 盘：WoW + 安全缓存",
+      "detail": "WoW 已卸；本轮再清安全缓存约 +3.33G（无管理员则 CBS/WU/DISM 未动）。C: 约 172G 空闲；Steam≈319G 未动。",
       "next": "无",
       "human": "无",
-      "stamp": "2026-10-13 11:10 CST"
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c9",
@@ -150,10 +150,10 @@
       "id": "c18",
       "col": "done",
       "title": "18 · HITL：开 PR 且 CI 绿即合",
-      "detail": "设计师已授权：说「开 PR」= 开并 CI 绿后直接合。adarkroom 只合 live、永不合 main。已合 #28。dot-pi #171 等实机；#168/#162 暂留。",
+      "detail": "设计师已授权：说「开 PR」= 开并 CI 绿后直接合。adarkroom 只合 live、永不合 main。dot-pi #168（2a3edf1）与 #162（b38762d）均已合 main；#171 已关未合。",
       "next": "新 PR 按此执行",
       "human": "无",
-      "stamp": "2026-10-13 11:40 CST"
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c19",
@@ -176,56 +176,83 @@
     {
       "id": "c21",
       "col": "progress",
-      "title": "21 · A Dark Room 自动通关 / verify 循环",
-      "detail": "云端仍在跑（cloud agent bc-d25b20ff）。此前 PR #32 已合 live（cc27e8b）补全中后期；自动通关 seed7 曾 PASS。",
-      "next": "等云端 agent 出结果；复核线上部署",
+      "title": "21 · A Dark Room 自动通关 / verify",
+      "detail": "PR #32 已合 live（结局可达）。云端自动通关 / verify 循环仍在跑或待复核部署。",
+      "next": "等云端结果；复核线上",
       "human": "无",
-      "stamp": "2026-10-13 13:50 CST"
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c22",
       "col": "progress",
-      "title": "22 · BOSS 直聘登录（Mac mini boss-tracker）",
-      "detail": "二维码 13:44 已过期；网页端未收到扫码确认。",
-      "next": "生成单张新码（不自动刷新）；你扫码并在手机确认；登录后只读核对 117 条漏斗",
-      "human": "扫码并在手机确认",
-      "stamp": "2026-10-13 13:50 CST"
+      "title": "22 · BOSS 直聘登录 + 117 条核对",
+      "detail": "未登录成功：二维码过期，无 wt2/bst cookie。Playwright 固定 profile 方案未跑完（Mac mini Cursor 本地执行离线）。117 条线上对比未开始。",
+      "next": "Mac mini 重连 → 单张新码（不自动刷新）→ 你扫码 → 只读比 117 条",
+      "human": "扫码登录（Mac 在线后）",
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c23",
       "col": "progress",
-      "title": "23 · 闲鱼登录 + 开店",
-      "detail": "页面仍显示「登录」，访客 cookie；开店未开始。任何付款前停。",
-      "next": "生成单张新码；你扫码登录后仅准备开店流程，付款前一律停",
-      "human": "扫码登录",
-      "stamp": "2026-10-13 13:50 CST"
+      "title": "23 · 闲鱼登录 + 开店准备",
+      "detail": "未登录成功（仍「登录」/无 unb·tracknick）。开店未开始；任何付款前停。同受 Mac mini Cursor 离线阻塞。",
+      "next": "Mac mini 重连 → 单张新码 → 你扫码 → 仅准备开店、付款前停",
+      "human": "扫码登录（Mac 在线后）",
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c24",
-      "col": "progress",
-      "title": "24 · dot-pi PR #171",
-      "detail": "用户称「已合待 Mac mini 实机验证」。实际：PR #171（Switch agent-fleet grunt default to Moonshot Kimi K3）已关闭未合入（mergedAt=null，closedAt≈11:31 HKT）。待确认下一步。",
-      "next": "确认是否重开/另开 PR，或仅做 Mac mini 实机验证其它合入",
-      "human": "确认 PR 处置",
-      "stamp": "2026-10-13 13:50 CST"
+      "col": "done",
+      "title": "24 · dot-pi PR #171（已关未合）",
+      "detail": "已关闭草稿、未合入 main。K3 走独立扩展仓（见 c3），不经 #171。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c25",
-      "col": "human",
-      "title": "25 · Pi albert 码（仍有效，尽快用）",
-      "detail": "设备码仍有效；请尽快在 Pi 侧使用。看板不写码值。",
-      "next": "你在 Pi 输入设备码完成登录",
-      "human": "尽快使用设备码",
-      "stamp": "2026-10-13 13:50 CST"
+      "col": "done",
+      "title": "25 · Pi albert 有效期",
+      "detail": "登录已完成（见 c4）；有效至约 2026-10-23 10:55 CST。无需再操作，除非到期或失效。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 14:30 CST"
     },
     {
       "id": "c26",
+      "col": "done",
+      "title": "26 · Windows 安全缓存清理（本轮）",
+      "detail": "你已批准；已清约 +3.33G，C:≈172G 空闲。原估约 14G 可清项里剩余需管理员的未动。Steam 未动。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 14:30 CST"
+    },
+    {
+      "id": "c27",
+      "col": "done",
+      "title": "27 · dot-pi #168 + #162 合入 main",
+      "detail": "#168 merge 2a3edf1；#162 解冲突后 merge b38762d（双亲含 #168）。均为 merge commit。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 14:30 CST"
+    },
+    {
+      "id": "c28",
       "col": "human",
-      "title": "26 · Windows C 盘清理（约 14G 缓存）",
-      "detail": "约 14G 缓存可清；删除需你批准。不擅自删。",
-      "next": "你批准后按清单清理",
-      "human": "批准删除约 14G 缓存",
-      "stamp": "2026-10-13 13:50 CST"
+      "title": "28 · update-artifacts-board skill 落地清理",
+      "detail": "skill 已以 acb5af8 直接推入 dot-pi main（无 PR）。远程还留 feat/update-artifacts-board-skill（同 tip）。触发率 eval 约 precision 0.98 / recall 1.00。",
+      "next": "你定：保留 acb5af8 或 revert；是否删远程 feat 分支",
+      "human": "回编号：留/revert；删/留 feat 分支",
+      "stamp": "2026-10-13 14:30 CST"
+    },
+    {
+      "id": "c29",
+      "col": "blocked",
+      "title": "29 · Mac mini Cursor 本地执行",
+      "detail": "ListMachines：liushiyudeMac-mini.local 未连接。阻塞 BOSS/闲鱼 Playwright、Clash Gemini 节点续跑、K3 本机安装。Tailscale 节点或仍可达，但 Cursor local-exec 离线。",
+      "next": "你在 Mac mini 打开 Cursor 并连上本地执行",
+      "human": "重连 Mac mini Cursor",
+      "stamp": "2026-10-13 14:30 CST"
     }
   ]
 }
