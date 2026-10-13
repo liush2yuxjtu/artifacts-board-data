@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 15:02 CST",
+  "updated": "2026-10-13 17:50 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -13,12 +13,12 @@
     },
     {
       "id": "c2",
-      "col": "progress",
-      "title": "2 · Antigravity / Gemini @ Mac mini",
-      "detail": "未修好。Clash「赔钱机场」节点轮测中途中断（可能切到圣何塞01并清过连接）；Cursor 本地执行离线。默认 Gemini 仍 FAILED_PRECONDITION（地区）。claude-sonnet-4-6 曾可用。",
-      "next": "Mac mini Cursor 重连后续跑节点测试（勿清连接）；必要时再查住宅 IP / 付款国",
-      "human": "无（或确认 Mac mini 在线）",
-      "stamp": "2026-10-13 14:30 CST"
+      "col": "done",
+      "title": "2 · Antigravity / CPA @ GrokBot box",
+      "detail": "已从 Mac mini 纠正到 box。CPA v8.0.27 tmux cpa-box，本机 127.0.0.1:8317；凭证 antigravity-liushiyu052333。gemini-3.1-flash-image 生图已通（/workspace/antigravity-test/）。Tailscale :8454 当前未暴露（serve 无此端口）。",
+      "next": "需要外网/tailnet 访问时重建 :8454 serve",
+      "human": "",
+      "stamp": "2026-10-13 17:50 CST"
     },
     {
       "id": "c3",
@@ -253,6 +253,51 @@
       "next": "可继续 BOSS/闲鱼 Playwright 与 Clash Gemini",
       "human": "",
       "stamp": "2026-10-13 14:38 CST"
+    },
+    {
+      "id": "c30",
+      "col": "done",
+      "title": "30 · selfmedia-mcp 仓 + verify",
+      "detail": "https://github.com/liush2yuxjtu/selfmedia-mcp 已 private；HEAD 含 d1c88b6+配置追加。verify 17/17 PASS（多项 expected: browser_busy）。publishing 硬禁用。",
+      "next": "桌面恢复后做真实读写 smoke",
+      "human": "",
+      "stamp": "2026-10-13 17:50 CST"
+    },
+    {
+      "id": "c31",
+      "col": "blocked",
+      "title": "31 · 桌面 Computer use / Screenshot",
+      "detail": "本侧 Screenshot 仍报 Computer use is not enabled（exec daemon 无 handler）。box-doctor 曾全过。Update Bot's Computer 是否已点：待查证。",
+      "next": "用户点 Update Bot's Computer 后重测",
+      "human": "打开设置 → Computer → Update Bot's Computer",
+      "stamp": "2026-10-13 17:50 CST"
+    },
+    {
+      "id": "c32",
+      "col": "blocked",
+      "title": "32 · 公众号 IP 白名单",
+      "detail": "目标 IP：123.182.21.6、162.251.162.203。AppSecret 状态待查证；IP 未添加。阻塞于桌面点击通道。",
+      "next": "桌面恢复后开 AppSecret 并加 IP，或用户手动加",
+      "human": "或手动：developers.weixin.qq.com 公众号 wx0dd523f521c09d67 基本信息",
+      "stamp": "2026-10-13 17:50 CST"
+    },
+    {
+      "id": "c33",
+      "col": "blocked",
+      "title": "33 · 抖音登录（selfmedia MCP）",
+      "detail": "MCP douyin_list_videos 现返回 browser_busy（CDP :9246）。登录态待查证。",
+      "next": "桌面恢复后打开登录页，用户扫码",
+      "human": "扫码登录抖音创作者",
+      "stamp": "2026-10-13 17:50 CST"
+    },
+    {
+      "id": "c34",
+      "col": "progress",
+      "title": "34 · GrokBot → Artifacts 看板同步",
+      "detail": "Artifacts 是工件看板（非网盘）。本轮把今日关键状态写入 artifacts-data.json 并 sync 到 artifacts-board-data。不上传系统盘/密钥明文到看板。",
+      "next": "sync-artifacts-data.sh 推远程",
+      "human": "",
+      "stamp": "2026-10-13 17:50 CST"
     }
   ]
 }
