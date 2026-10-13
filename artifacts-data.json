@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14 01:03 CST",
+  "updated": "2026-10-14 07:36 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -229,7 +229,7 @@
     },
     {
       "id": "c28",
-      "col": "human",
+      "col": "done",
       "title": "28 · update-artifacts-board skill 落地清理",
       "detail": "skill 已以 acb5af8 直接推入 dot-pi main（无 PR）。远程还留 feat/update-artifacts-board-skill（同 tip）。触发率 eval 约 precision 0.98 / recall 1.00。",
       "next": "你定：保留 acb5af8 或 revert；是否删远程 feat 分支",
