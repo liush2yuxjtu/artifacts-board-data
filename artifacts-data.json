@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 14:38 CST",
+  "updated": "2026-10-13 15:02 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -175,12 +175,12 @@
     },
     {
       "id": "c21",
-      "col": "progress",
+      "col": "human",
       "title": "21 · A Dark Room 自动通关 / verify",
-      "detail": "PR #32 已合 live（结局可达）。云端自动通关 / verify 循环仍在跑或待复核部署。",
-      "next": "等云端结果；复核线上",
-      "human": "无",
-      "stamp": "2026-10-13 14:30 CST"
+      "detail": "PR #32 已合 live（cc27e8b）。云端 playthrough 已结束。生产 adarkroom-zh.vercel.app 仍挂 main@3e8bda3（#27）；#28–#32 仅有 Preview READY（dpl_F85XWeVu… / cc27e8b）。",
+      "next": "你定：是否把 Preview cc27e8b 提升为生产",
+      "human": "回：提升 / 先别动",
+      "stamp": "2026-10-13 15:02 CST"
     },
     {
       "id": "c22",
