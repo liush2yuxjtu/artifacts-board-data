@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 17:50 CST",
+  "updated": "2026-10-13 17:52 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -193,12 +193,12 @@
     },
     {
       "id": "c23",
-      "col": "progress",
+      "col": "done",
       "title": "23 · 闲鱼登录 + 开店准备",
-      "detail": "未登录成功（仍「登录」/无 unb·tracknick）。开店未开始；任何付款前停。同受 Mac mini Cursor 离线阻塞。",
-      "next": "Mac mini 重连 → 单张新码 → 你扫码 → 仅准备开店、付款前停",
-      "human": "扫码登录（Mac 在线后）",
-      "stamp": "2026-10-13 14:30 CST"
+      "detail": "闲鱼已登录成功（logged_in + cookies 齐）。用户确认本事项结束；开店若另起再开新卡。任何付款前仍停。",
+      "next": "无（登录事项已结束）",
+      "human": "无",
+      "stamp": "2026-10-13 17:52 CST"
     },
     {
       "id": "c24",
