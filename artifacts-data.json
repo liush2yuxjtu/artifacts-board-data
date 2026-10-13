@@ -1,0 +1,177 @@
+{
+  "updated": "2026-10-13 11:45 CST",
+  "timezone": "Asia/Shanghai",
+  "cards": [
+    {
+      "id": "c1",
+      "col": "done",
+      "title": "1 · A Dark Room 迁移",
+      "detail": "第 1–9 批已合并（PR #17–#27），迁移检查 299/299 全绿，生产 3e8bda3 上 7 套默认 verify 通过。",
+      "next": "无（迁移门禁已绿）",
+      "human": "无",
+      "stamp": "生产 · adarkroom-zh.vercel.app"
+    },
+    {
+      "id": "c2",
+      "col": "progress",
+      "title": "2 · Antigravity Gemini 地区限制",
+      "detail": "美国机（Ashburn）Gemini+Claude 均通过；Mac mini Gemini 仍被拦（Clash 出口 LA 203.10.96.139）→ 更像机房 IP/付款国家问题。",
+      "next": "试住宅 IP / 换节点；可选核对付款国家",
+      "human": "可选：核对付款国家",
+      "stamp": "2026-10-13 11:40 CST"
+    },
+    {
+      "id": "c3",
+      "col": "done",
+      "title": "3 · K3 Pi 扩展（grunt → kimi-k3）",
+      "detail": "独立仓 liush2yuxjtu/dot-pi-kimi-k3-extension；PR #1 已 squash 合入 main（a9e4e51）。CI 11/11 + Actions 绿。dot-pi #171 已关、未入 main。模型 moonshot/kimi-k3 @ api.moonshot.cn。",
+      "next": "Mac mini 装扩展实机验",
+      "human": "无",
+      "stamp": "2026-10-13 11:41 CST"
+    },
+    {
+      "id": "c4",
+      "col": "done",
+      "title": "4 · Pi albert Pro 设备码重登",
+      "detail": "TS3N-1WQF0 登录成功；openai-codex / gpt-6.1-sol = ready；plan=pro；钥匙串已更新。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 11:06 CST"
+    },
+    {
+      "id": "c5",
+      "col": "done",
+      "title": "5 · Grok Bot 美国机测 agy",
+      "detail": "已装 1.3.3 并登录；出口 Ashburn；Gemini+Claude hi 均通过。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 10:45 CST"
+    },
+    {
+      "id": "c6",
+      "col": "progress",
+      "title": "6 · 飞书组织改名 AFK Agents",
+      "detail": "目标名 AFK Agents（原「流水 agent 工作间」F6X4ZN88KL8）。超管用户421250（+86 17856150518）。改名进行中（旧码 368239 已用，可能要新短信）；同时邀请黄运樟。",
+      "next": "等改名成功/短信码 + 邀结果",
+      "human": "短信码请念给我",
+      "stamp": "2026-10-13 11:40 CST"
+    },
+    {
+      "id": "c7",
+      "col": "done",
+      "title": "7 · Windows 磁盘：WoW 卸载 + 缓存清理",
+      "detail": "WoW 已卸约 +120–127GB；npm/TEMP/pip 缓存约 +11GB；C: 空闲约 168GB。Windows 磁盘问题已解决。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 11:10 CST"
+    },
+    {
+      "id": "c9",
+      "col": "done",
+      "title": "9 · Drive 上传 Claude 导出",
+      "detail": "目标 G:\\我的云端硬盘\\exports-20261013，8 文件约 1.23GB。先前复核 8/8 字节一致且本地 Downloads 未删；本轮按指令再核。",
+      "next": "复核完成 → 标 done",
+      "human": "无",
+      "stamp": "2026-10-13 11:35 CST"
+    },
+    {
+      "id": "c10",
+      "col": "done",
+      "title": "10 · PM Top5 遥测分析",
+      "detail": "开局秒退、村→室外漏斗崩、renderPath null、save_corrupt×39、中后期无人触达。4h 静默=无流量非管道挂。",
+      "next": "工程/产品跟进见 c12–c15、c17",
+      "human": "无",
+      "stamp": "2026-10-13 11:20 CST"
+    },
+    {
+      "id": "c11",
+      "col": "done",
+      "title": "11 · 实机遥测 + verify 门禁包",
+      "detail": "实机遥测正常：209/209 POST→201；session 0c0a2738… 共 1638 行入库。管线未坏（此前无数据多半无人玩）。PR #29 live-play gate 已合入 live（sha 4de1f6e）。page_unload/session_end 无头不可靠，未作门禁。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 11:42 CST"
+    },
+    {
+      "id": "c12",
+      "col": "done",
+      "title": "12 · 中后期漏斗（172→21）",
+      "detail": "非自动：生火172→森林21（约 87.8–90% 断崖）；地图/战斗仅1会长局；船/制造器/声望等 0。",
+      "next": "靠 c17 阶段门引导出门",
+      "human": "无",
+      "stamp": "2026-10-13 11:17 CST"
+    },
+    {
+      "id": "c13",
+      "col": "done",
+      "title": "13 · 2.6s 中位数核实",
+      "detail": "265「非自动」中 235 为未打标 Headless；类人仅 16，中位约 5.86–6s；>2min 全为同一 Edge/155 Win 自测。",
+      "next": "PM 指标必须用人机门禁（#28 已合）",
+      "human": "无",
+      "stamp": "2026-10-13 11:18 CST"
+    },
+    {
+      "id": "c14",
+      "col": "done",
+      "title": "14 · client_version 遥测字段",
+      "detail": "#28 client_version + human-filter 已合；#30 pm-recommendation-hygiene 已合入 live（sha 1f0e6d1）。",
+      "next": "无",
+      "human": "无",
+      "stamp": "2026-10-13 11:45 CST"
+    },
+    {
+      "id": "c15",
+      "col": "done",
+      "title": "15 · 三维诊断（开局/漏斗）",
+      "detail": "主因 (c)执行弱+(b)缺强制首目标/阶段门，非 (a)复刻错。已采纳暗房风常驻一行+阶段门（见 c17）；verify 方法论已写入门禁包。",
+      "next": "等 c17 落地",
+      "human": "无",
+      "stamp": "2026-10-13 11:24 CST"
+    },
+    {
+      "id": "c16",
+      "col": "done",
+      "title": "16 · Claude 导出：证据与用途",
+      "detail": "导出仅属 liushiyu052333；无官方封号字段。登录 16 次 JP/US/SG/KR 机房 IP；最近两次 10/12 22:18/22:38 HKT = 103.62.49.154 Edge/Win。数据可作存档/记忆迁移/artifact 源码，勿训竞品。",
+      "next": "见 c19 封前登录深挖",
+      "human": "无",
+      "stamp": "2026-10-13 11:30 CST"
+    },
+    {
+      "id": "c17",
+      "col": "done",
+      "title": "17 · 开局强制目标实现",
+      "detail": "开局常驻中文目标行 + 遥测 goal_prompt_*；PR #31 已 squash 合入 live cursor/godot-chinese-remake-5c3a（58afb45）。未合 main。",
+      "next": "实机看新档提示「火灭了，生火」",
+      "human": "无",
+      "stamp": "2026-10-13 11:42 CST"
+    },
+    {
+      "id": "c18",
+      "col": "done",
+      "title": "18 · HITL：开 PR 且 CI 绿即合",
+      "detail": "设计师已授权：说「开 PR」= 开并 CI 绿后直接合。adarkroom 只合 live、永不合 main。已合 #28。dot-pi #171 等实机；#168/#162 暂留。",
+      "next": "新 PR 按此执行",
+      "human": "无",
+      "stamp": "2026-10-13 11:40 CST"
+    },
+    {
+      "id": "c19",
+      "col": "done",
+      "title": "19 · 封号时间 + 封前最后登录 IP",
+      "detail": "仅 052333 有数据；无官方封号字段。外部封号(~10/10)前最后登录 2026-09-29 21:24 HKT，207.32.218.93 US，Mac Chrome153；10/12 22:18/22:38 JP 103.62.49.154 为封后登录。nyn5255：对话内 Anthropic 停用邮件 2026-06-26 13:53 HKT，无 IP。liushiyuxjtu：无数据（需单独导出）。",
+      "next": "见 c20 深挖",
+      "human": "无",
+      "stamp": "2026-10-13 11:35 CST"
+    },
+    {
+      "id": "c20",
+      "col": "done",
+      "title": "20 · 052333 封号深挖",
+      "detail": "主因：UTC+8 实际使用 + 不支持地区（HK/CN 均不在名单）+ VPN/机房 IP。高相关：绑 nyn5255 连接器；与 xjtu 同设备/同 IP（9/18、9/28）。付款英镑 vs 无 UK 登录。报告 /workspace/reports/claude-052333-ban-deepdive.md。",
+      "next": "Play 取消续费自负；勿再用同设备开新 Claude",
+      "human": "无",
+      "stamp": "2026-10-13 11:41 CST"
+    }
+  ]
+}
