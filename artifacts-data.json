@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13 18:24 CST",
+  "updated": "2026-10-14 01:03 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -22,12 +22,12 @@
     },
     {
       "id": "c3",
-      "col": "progress",
-      "title": "3 · K3 扩展（仓有、机未装）",
-      "detail": "仓 liush2yuxjtu/dot-pi-kimi-k3-extension：PR #2 已合 main（9da3638）。Mac mini 未安装扩展；fleet 仍 kimi-k2.7-code @ api.moonshot.cn。dot-pi #171 已关未合。",
-      "next": "Mac mini 装扩展并做 live verify；或明确暂不装",
+      "col": "done",
+      "title": "3 · K3 扩展（Mac mini 已装）✓",
+      "detail": "仓 PR #2/#3/#4 已合；Mac mini 已装，grunt=kimi-k3。dot-pi #171 已关未合。",
+      "next": "可选：/grunt-model 交互确认",
       "human": "无",
-      "stamp": "2026-10-13 14:30 CST"
+      "stamp": "2026-10-14 01:05 CST"
     },
     {
       "id": "c4",
@@ -185,11 +185,11 @@
     {
       "id": "c22",
       "col": "progress",
-      "title": "22 · BOSS 直聘登录 + 117 条核对",
-      "detail": "未登录成功：二维码过期，无 wt2/bst cookie。Playwright 固定 profile 方案未跑完（Mac mini Cursor 本地执行离线）。117 条线上对比未开始。",
-      "next": "Mac mini 重连 → 单张新码（不自动刷新）→ 你扫码 → 只读比 117 条",
-      "human": "扫码登录（Mac 在线后）",
-      "stamp": "2026-10-13 14:30 CST"
+      "title": "22 · BOSS 直聘：面试回复 + 117 核对",
+      "detail": "已登录（wt2）。Oct 扫描：0 打招呼；15 HR 回复；3 PDF 求简历；2 待处理面试邀请（天天乐学 吴女士 10/8；一起住好房 焦先生 10/13）。117 条线上核对未做完。",
+      "next": "你定：是否起草面试回复；Mac 在线后做 117 只读核对",
+      "human": "回编号：是否起草回复；扫码仅在掉线时",
+      "stamp": "2026-10-14 01:05 CST"
     },
     {
       "id": "c24",
@@ -265,12 +265,12 @@
     },
     {
       "id": "c33",
-      "col": "blocked",
-      "title": "33 · 抖音登录（selfmedia MCP）",
-      "detail": "MCP douyin_list_videos 现返回 browser_busy（CDP :9246）。登录态待查证。",
-      "next": "桌面恢复后打开登录页，用户扫码",
-      "human": "扫码登录抖音创作者",
-      "stamp": "2026-10-13 17:50 CST"
+      "col": "done",
+      "title": "33 · 抖音登录（selfmedia MCP）✓",
+      "detail": "2026-10-13 已扫码登录；profile .../selfmedia/douyin；selfmedia-mcp verify 全绿（6428039）。旧 CDP :9246 browser_busy 已用 Playwright 替代。",
+      "next": "无（维持登录态；发布仍需审批）",
+      "human": "无",
+      "stamp": "2026-10-14 01:05 CST"
     },
     {
       "id": "c34",
