@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15 04:38 CST",
+  "updated": "2026-10-18 03:17 CST",
   "timezone": "Asia/Shanghai",
   "cards": [
     {
@@ -33,7 +33,7 @@
       "id": "c4",
       "col": "done",
       "title": "4 · Pi albert Pro 设备码重登",
-      "detail": "albert 设备码登录仍有效至约 2026-10-23 10:55 CST（约 9–10 天）；openai-codex / gpt-6.1-sol ready；未重发码。看板不写码值。",
+      "detail": "albert 设备码登录仍有效至约 2026-10-23 10:55 CST（约 9–10 天）；openai-codex / gpt-6.1-sol ready；未重发码。看板不写码值。 | 用户不关心 albert 设备码提醒 2026-10-18；勿再催。",
       "next": "无",
       "human": "无",
       "stamp": "2026-10-13 14:30 CST"
@@ -184,11 +184,11 @@
     },
     {
       "id": "c22",
-      "col": "progress",
+      "col": "done",
       "title": "22 · BOSS 直聘：面试回复 + 117 核对",
-      "detail": "已登录（wt2）。Oct 扫描：0 打招呼；15 HR 回复；3 PDF 求简历；2 待处理面试邀请（天天乐学 吴女士 10/8；一起住好房 焦先生 10/13）。117 条线上核对未做完。",
-      "next": "你定：是否起草面试回复；Mac 在线后做 117 只读核对",
-      "human": "回编号：是否起草回复；扫码仅在掉线时",
+      "detail": "用户确认已完成 2026-10-18：天天乐学吴女士 / 一起住好房焦先生 / BOSS 117 已处理。未再联系雇主。",
+      "next": "无",
+      "human": "",
       "stamp": "2026-10-14 01:05 CST"
     },
     {
@@ -204,7 +204,7 @@
       "id": "c25",
       "col": "done",
       "title": "25 · Pi albert 有效期",
-      "detail": "登录已完成（见 c4）；有效至约 2026-10-23 10:55 CST。无需再操作，除非到期或失效。",
+      "detail": "登录已完成（见 c4）；有效至约 2026-10-23 10:55 CST。无需再操作，除非到期或失效。 | 用户不关心；取消/暂停仅 albert 提醒 2026-10-18。",
       "next": "无",
       "human": "无",
       "stamp": "2026-10-13 14:30 CST"
@@ -256,11 +256,11 @@
     },
     {
       "id": "c32",
-      "col": "blocked",
+      "col": "done",
       "title": "32 · 公众号 IP 白名单",
-      "detail": "目标 IP：123.182.21.6、162.251.162.203。AppSecret 状态待查证；IP 未添加。阻塞于桌面点击通道。",
-      "next": "桌面恢复后开 AppSecret 并加 IP，或用户手动加",
-      "human": "或手动：developers.weixin.qq.com 公众号 wx0dd523f521c09d67 基本信息",
+      "detail": "用户确认已完成 2026-10-18：公众号 IP 白名单已加好。",
+      "next": "无",
+      "human": "",
       "stamp": "2026-10-13 17:50 CST"
     },
     {
@@ -292,10 +292,10 @@
     },
     {
       "id": "c35",
-      "col": "progress",
+      "col": "done",
       "title": "35 · save_snapshot 遥测 #33",
-      "detail": "PR #33 已合 live（076590f）：脱敏 adr.save.v1 → payload.save_data。Preview READY（dpl_7XCj93NZ…）；生产仍为 #32/cc27e8b。",
-      "next": "可选：提升 Preview 076590f 到生产（遥测-only）",
+      "detail": "用户确认生产已是 #33 + live save_snapshot（2026-10-18）。不再写 #32。证据：用户决策 + 合入 #33。",
+      "next": "无",
       "human": "",
       "stamp": "2026-10-13 18:24 CST"
     }
