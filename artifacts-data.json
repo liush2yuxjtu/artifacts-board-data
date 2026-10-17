@@ -177,7 +177,7 @@
       "id": "c21",
       "col": "done",
       "title": "21 · A Dark Room 自动通关 / verify",
-      "detail": "PR #32 已合 live（cc27e8b）。生产 adarkroom-zh.vercel.app 已指向 dpl_F8jGwMA… / cc27e8b（#32 中后期+通关门禁），不再挂 main@3e8bda3。",
+      "detail": "历史：PR #32 曾合 live。2026-10-18 用户确认生产已是 #33 + live save_snapshot（见 c35 done）。",
       "next": "无（#32 已在生产）",
       "human": "无",
       "stamp": "2026-10-13 18:24 CST"
